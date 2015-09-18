@@ -7,21 +7,25 @@
 <body>
 	<p>
 		Vector/Point 1
-		<input type="number" min="0" max="1" id="type1" />
-		<input type="number" id="x1" />
-		<input type="number" id="y1" />
-		<input type="number" id="z1" />
+		<input type="number" value="0" min="0" max="1" id="type1" />
+		<input type="number" value="0" id="x1" />
+		<input type="number" value="0" id="y1" />
+		<input type="number" value="0" id="z1" />
 	</p>
 	
 	<p>
 		Vector/Point 2
-		<input type="number" min="0" max="1" id="type2" />
-		<input type="number" id="x2" />
-		<input type="number" id="y2" />
-		<input type="number" id="z2" />
+		<input type="number" value="0" min="0" max="1" id="type2" />
+		<input type="number" value="0" id="x2" />
+		<input type="number" value="0" id="y2" />
+		<input type="number" value="0" id="z2" />
 
-		<input type="button" onclick="getMagnitude()" value="Get Magnitude">
-		<input type="button" onclick="getDirection()" value="Get Direction">
+		<input type="button" onclick="getMagnitude()" value="Get Magnitude"/>
+		<input type="button" onclick="scalarMultiplication()" value="Scalar Mult."/>
+		<input type="number" id="scalar"/>
+		<input type="button" onclick="vectorAddition()" value="Add"/>
+		<input type="button" onclick="vectorSubtraction()" value="Subtr."/>
+		<input type="button" onclick="pointVecAdd()" value="Point/Vector Add"/>
 
 	</p>
 

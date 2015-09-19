@@ -11,6 +11,15 @@
 		<input type="number" value="0" id="x1" />
 		<input type="number" value="0" id="y1" />
 		<input type="number" value="0" id="z1" />
+
+		<input type="button" onclick="printMagnitude()" value="Get Magnitude"/>
+		<input type="button" onclick="scalarMultiplication()" value="Scalar Mult."/>
+		<input type="number" id="scalar" style="width: 35px;"/>
+		<input type="button" onclick="vectorAddition()" value="Add"/>
+		<input type="button" onclick="vectorSubtraction()" value="Subtr."/>
+		<input type="button" onclick="pointVecAdd()" value="Point/Vector Add"/>
+		<input type="button" onclick="pointSubtraction()" value="Point Subtr."/>
+		<input type="button" onclick="crossProduct()" value="Cross Product"/>
 	</p>
 	
 	<p>
@@ -20,13 +29,8 @@
 		<input type="number" value="0" id="y2" />
 		<input type="number" value="0" id="z2" />
 
-		<input type="button" onclick="getMagnitude()" value="Get Magnitude"/>
-		<input type="button" onclick="scalarMultiplication()" value="Scalar Mult."/>
-		<input type="number" id="scalar"/>
-		<input type="button" onclick="vectorAddition()" value="Add"/>
-		<input type="button" onclick="vectorSubtraction()" value="Subtr."/>
-		<input type="button" onclick="pointVecAdd()" value="Point/Vector Add"/>
-
+		<input type="button" onclick="dotProduct()" value="Dot Product"/>
+		<input type="button" onclick="normalizeVect()" value="Normalize V1"/>
 	</p>
 
 	<p id="result">Result: </p>

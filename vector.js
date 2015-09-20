@@ -68,7 +68,7 @@ function getMagnitude(v1){
 }
 
 function printMagnitude(){
-	result.innerHTML = "Magnitude: "+getMagnitude(cord1);
+	result.innerHTML = "Magnitude: "+getMagnitude(cord1).toFixed(2);
 }
 
 function getDirection(){
@@ -187,7 +187,7 @@ function normalizeVect(){
 		];
 
 		drawVector(finalVect, '#ff0000');
-		result.innerHTML = "V1(n) = ("+finalVect[0]+","+finalVect[1]+","+finalVect[2]+")";
+		result.innerHTML = "V1(n) = ("+finalVect[0].toFixed(2)+","+finalVect[1].toFixed(2)+","+finalVect[2].toFixed(2)+")";
 	} else result.innerHTML = "Invalid operation. V1 is not a vector.";
 
 }

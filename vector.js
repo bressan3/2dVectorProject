@@ -200,7 +200,7 @@ function affineSum(){
 		var finalVect = [
 			((1- +s) * +getCordinates(cord1,'x')) + (+s * +getCordinates(cord2,'x')),
 			((1- +s) * +getCordinates(cord1,'y')) + (+s * +getCordinates(cord2,'y')),
-			((1- +s) * +getCordinates(cord1,'z')) + (+s * +getCordinates(cord2,'z')),
+			((1- +s) * +getCordinates(cord1,'z')) + (+s * +getCordinates(cord2,'z'))
 		];
 
 		drawVector(finalVect, '#ff0000');

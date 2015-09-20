@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>2dVector Project</title>
+	<meta charset="UTF-8">
 	<script type="text/javascript" src="vector.js"></script>
 </head>
 <body>
@@ -13,13 +14,13 @@
 		<input type="number" value="0" id="z1" />
 
 		<input type="button" onclick="printMagnitude()" value="Get Magnitude"/>
+		<input type="button" onclick="getDirection()" value="Direction"/>
 		<input type="button" onclick="scalarMultiplication()" value="Scalar Mult."/>
-		<input type="number" id="scalar" style="width: 35px;"/>
+		<input type="number" value="0" id="scalar" style="width: 35px;"/>
 		<input type="button" onclick="vectorAddition()" value="Add"/>
 		<input type="button" onclick="vectorSubtraction()" value="Subtr."/>
 		<input type="button" onclick="pointVecAdd()" value="Point/Vector Add"/>
 		<input type="button" onclick="pointSubtraction()" value="Point Subtr."/>
-		<input type="button" onclick="crossProduct()" value="Cross Product"/>
 	</p>
 	
 	<p>
@@ -29,8 +30,11 @@
 		<input type="number" value="0" id="y2" />
 		<input type="number" value="0" id="z2" />
 
+		<input type="button" onclick="crossProduct()" value="Cross Product"/>
 		<input type="button" onclick="dotProduct()" value="Dot Product"/>
 		<input type="button" onclick="normalizeVect()" value="Normalize V1"/>
+		<input type="button" onclick="affineSum()" value="Affine sum"/>
+		<input type="number" id="affineSum" value="0" max="1" min="0"/>
 	</p>
 
 	<p id="result">Result: </p>

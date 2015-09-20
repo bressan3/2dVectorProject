@@ -7,7 +7,7 @@ window.onload = function init () {
 	canvas = document.getElementById("myCanvas");
 	context = canvas.getContext("2d");
 	//changes canvas origin to the middle
-	context.transform(-1, 0, 0, 1, 250, 250);
+	context.transform(1, 0, 0, -1, 250, 250);
 	result = document.getElementById("result");
 
 	drawVector(0,0,0);
@@ -15,7 +15,9 @@ window.onload = function init () {
 }
 
 function vector(){
-	context.clearRect(0,0,500,500);
+	//clears the canvas and reset the origin to the middle
+	context.canvas.width = context.canvas.width;
+	context.transform(1, 0, 0, -1, 250, 250);
 
 	cord1 = [document.getElementById("x1").value,
 		document.getElementById("y1").value,
@@ -126,7 +128,6 @@ function vectorSubtraction(){
 
 function pointVecAdd(){
 	vector();
-
 	if(isVector(cord1) && isVector(cord2) || isPoint(cord1) && isPoint(cord2))
 		result.innerHTML = "Invalid operation. Please type a point and vector to continue.";
 	else{
@@ -143,7 +144,6 @@ function pointVecAdd(){
 
 function pointSubtraction(){
 	vector();
-
 	if(isPoint(cord1) && isPoint(cord2) == 1){
 		var finalVect = [
 			+getCordinates(cord1,'x') - +getCordinates(cord2,'x'),
@@ -160,7 +160,6 @@ function pointSubtraction(){
 
 function crossProduct(){
 	vector();
-
 	//V1 x V2 = {y1 z2 - z1 y2; z1 x2 - x1 z2; x1 y2 - y1 x2}
 	if(isVector(cord1) && isVector(cord2)){
 		var finalVect = [
@@ -180,7 +179,6 @@ function dotProduct(){
 
 function normalizeVect(){
 	vector();
-
 	if(isVector(cord1)){
 		var finalVect = [
 			+getCordinates(cord1,'x')/+getMagnitude(cord1),

@@ -9,9 +9,6 @@ window.onload = function init () {
 	//changes canvas origin to the middle
 	context.transform(1, 0, 0, -1, 250, 250);
 	result = document.getElementById("result");
-
-	drawVector(0,0,0);
-	context.clearRect(0,0,500,500);
 }
 
 function vector(){
@@ -208,4 +205,3 @@ function affineSum(){
 
 	} else result.innerHTML = "Invalid operation. Please insert two vectors to continue";
 }
-

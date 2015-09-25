@@ -3,37 +3,43 @@
 <head>
 	<title>2dVector Project</title>
 	<meta charset="UTF-8">
-	<script type="text/javascript" src="vector.js"></script>
+	<script type="text/javascript" src="ui.js"></script>
 </head>
 <body>
 	<p>
 		Vector/Point 1
-		<input type="number" value="0" min="0" max="1" id="type1" />
+		<select id="type1">
+		  <option value="0">Vector</option>
+		  <option value="1">Point</option>
+		</select>
 		<input type="number" value="0" id="x1" />
 		<input type="number" value="0" id="y1" />
 		<input type="number" value="0" id="z1" />
 
-		<input type="button" onclick="printMagnitude()" value="Get Magnitude"/>
-		<input type="button" onclick="getDirection()" value="Direction"/>
-		<input type="button" onclick="scalarMultiplication()" value="Scalar Mult."/>
+		<input type="button" onclick="printMagnitude()" value="Magnitude (V1)"/>
+		<input type="button" onclick="printDirection()" value="Direction (V1)"/>
+		<input type="button" onclick="printScalarMult()" value="Scalar Mult. (V1)"/>
 		<input type="number" value="0" id="scalar" style="width: 35px;"/>
-		<input type="button" onclick="vectorAddition()" value="Add"/>
-		<input type="button" onclick="vectorSubtraction()" value="Subtr."/>
-		<input type="button" onclick="pointVecAdd()" value="Point/Vector Add"/>
-		<input type="button" onclick="pointSubtraction()" value="Point Subtr."/>
+		<input type="button" onclick="printVecAddition()" value="Add"/>
+		<input type="button" onclick="printVecSubtraction()" value="Subtr."/>
+		<input type="button" onclick="printPointVecAdd()" value="Point/Vector Add"/>
+		<input type="button" onclick="printPtSubtraction()" value="Point Subtr."/>
 	</p>
 	
 	<p>
 		Vector/Point 2
-		<input type="number" value="0" min="0" max="1" id="type2" />
+		<select id="type2">
+		  <option value="0">Vector</option>
+		  <option value="1">Point</option>
+		</select>		
 		<input type="number" value="0" id="x2" />
 		<input type="number" value="0" id="y2" />
 		<input type="number" value="0" id="z2" />
 
-		<input type="button" onclick="crossProduct()" value="Cross Product"/>
-		<input type="button" onclick="dotProduct()" value="Dot Product"/>
-		<input type="button" onclick="normalizeVect()" value="Normalize V1"/>
-		<input type="button" onclick="affineSum()" value="Affine sum"/>
+		<input type="button" onclick="printCrossProduct()" value="Cross Product"/>
+		<input type="button" onclick="printDotProduct()" value="Dot Product"/>
+		<input type="button" onclick="printNormalizeVect()" value="Normalize (V1)"/>
+		<input type="button" onclick="printAffineSum()" value="Affine sum"/>
 		<input type="number" id="affineSum" value="0" max="1" min="0"/>
 	</p>
 
